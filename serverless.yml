@@ -54,7 +54,16 @@ functions:
     handler: get.main
     events:
       - http:
-        path: nodes/{id}
-        method: get
-        cors: true
-        authorizer: aws_iam
+          path: nodes/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
+
+  list:
+    handler: list.main
+    events:
+      - http:
+          path: nodes
+          method: get
+          cors: true
+          authorizer: aws_iam
