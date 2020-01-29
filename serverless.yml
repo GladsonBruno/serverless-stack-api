@@ -76,3 +76,12 @@ functions:
           method: put
           cors: true
           authorizer: aws_iam
+
+  delete:
+    handler: delete.main
+    events:
+      - http:
+          path: nodes/{id}
+          method: put
+          cors: true
+          authorizer: aws_iam
