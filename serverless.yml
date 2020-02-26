@@ -55,7 +55,7 @@ functions:
     handler: get.main
     events:
       - http:
-          path: nodes/{id}
+          path: notes/{id}
           method: get
           cors: true
           authorizer: aws_iam
@@ -64,7 +64,7 @@ functions:
     handler: list.main
     events:
       - http:
-          path: nodes
+          path: notes
           method: get
           cors: true
           authorizer: aws_iam
@@ -73,7 +73,7 @@ functions:
     handler: update.main
     events:
       - http:
-          path: nodes/{id}
+          path: notes/{id}
           method: put
           cors: true
           authorizer: aws_iam
@@ -82,7 +82,7 @@ functions:
     handler: delete.main
     events:
       - http:
-          path: nodes/{id}
+          path: notes/{id}
           method: put
           cors: true
           authorizer: aws_iam
