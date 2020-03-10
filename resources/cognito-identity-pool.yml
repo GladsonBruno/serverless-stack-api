@@ -54,8 +54,8 @@ Resources:
                   - 'mobileanalytics:PutEvents'
                   - 'cognito-sync:*'
                   - 'cognito-identity:*'
-                  - "dynamodb:GetItem",
-                  - "dynamodb:PutItem",
+                  - "dynamodb:GetItem"
+                  - "dynamodb:PutItem"
                   - "dynamodb:Query"
                 Resource: '*'
               
