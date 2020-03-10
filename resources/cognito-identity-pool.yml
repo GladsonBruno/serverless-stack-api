@@ -2,6 +2,7 @@ Resources:
   # The federated identity for our user pool to auth with
   CognitoIdentityPool:
     Type: AWS::Cognito::IdentityPool
+    DeletionPolicy: Retain
     Properties:
       # Generate a name based on the stage
       IdentityPoolName: ${self:custom.stage}IdentityPool
