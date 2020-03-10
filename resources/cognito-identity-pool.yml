@@ -54,6 +54,9 @@ Resources:
                   - 'mobileanalytics:PutEvents'
                   - 'cognito-sync:*'
                   - 'cognito-identity:*'
+                  - "dynamodb:GetItem",
+                  - "dynamodb:PutItem",
+                  - "dynamodb:Query"
                 Resource: '*'
               
               # Allow users to invoke our API
