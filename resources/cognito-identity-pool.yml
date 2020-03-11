@@ -18,7 +18,7 @@ Resources:
   UserPoolIdentityProvider:
     Type: AWS::Cognito::UserPoolIdentityProvider
     Properties:
-      UserPoolId: !Ref UserPool
+      UserPoolId: !Ref CognitoUserPool
       ProviderName: "Facebook"
       ProviderDetails:
         client_id: ${self:custom.facebookClientId}
