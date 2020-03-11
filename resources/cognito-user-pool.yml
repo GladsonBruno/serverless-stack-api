@@ -1,6 +1,7 @@
 Resources:
   CognitoUserPool:
     Type: AWS::Cognito::UserPool
+    DeletionPolicy: Retain
     Properties:
       # Generate a name based on the stage
       UserPoolName: ${self:custom.stage}-user-pool
