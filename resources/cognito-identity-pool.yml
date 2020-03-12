@@ -1,3 +1,5 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
 Resources:
   # The federated identity for our user pool to auth with
   CognitoIdentityPool:

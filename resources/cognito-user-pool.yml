@@ -21,6 +21,8 @@ Resources:
       ExplicitAuthFlows:
         - ADMIN_NO_SRP_AUTH
       GenerateSecret: false
+      SupportedIdentityProviders:
+        - Facebook
 
 # Print out the Id of the User Pool that is created
 Outputs:
