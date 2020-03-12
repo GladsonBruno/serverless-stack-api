@@ -15,19 +15,6 @@ Resources:
           ProviderName:
             Fn::GetAtt: [ "CognitoUserPool", "ProviderName" ]
 
-  UserPoolIdentityProvider:
-    Type: AWS::Cognito::UserPoolIdentityProvider
-    Properties:
-      UserPoolId: !Ref CognitoUserPool
-      ProviderName: "Facebook"
-      ProviderDetails:
-        client_id: ${self:custom.facebookClientId}
-        client_secret: ${self:custom.facebookClientSecret}
-        authorize_scopes: "public_profile,email"
-      ProviderType: "Facebook"
-      AttributeMapping:
-        email: "email"
-
   # IAM roles
   CognitoIdentityPoolRoles:
     Type: AWS::Cognito::IdentityPoolRoleAttachment
