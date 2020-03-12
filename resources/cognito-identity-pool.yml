@@ -16,9 +16,6 @@ Resources:
             Ref: CognitoUserPoolClient
           ProviderName:
             Fn::GetAtt: [ "CognitoUserPool", "ProviderName" ]
-        - ClientId:
-            Ref: CognitoUserPoolClient
-          ProviderName: "Facebook"
 
   # IAM roles
   CognitoIdentityPoolRoles:
