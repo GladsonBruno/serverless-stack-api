@@ -1,10 +1,10 @@
 Resources:
-  UserPoolIdentityProvider:
+  UserPoolIdentityProviderFacebook:
     Type: AWS::Cognito::UserPoolIdentityProvider
     Properties:
       UserPoolId: 
         Ref: CognitoUserPool
-      ProviderName: "Facebook"
+      ProviderName: ${self:custom.stage}-Facebook
       ProviderDetails:
         client_id: ${self:custom.facebookClientId}
         client_secret: ${self:custom.facebookClientSecret}
@@ -16,4 +16,4 @@ Resources:
 Outputs:
   UserPoolId:
     Value:
-      Ref: UserPoolIdentityProvider
+      Ref: UserPoolIdentityProviderFacebook
