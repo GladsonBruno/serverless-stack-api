@@ -16,10 +16,9 @@ Resources:
             Ref: CognitoUserPoolClient
           ProviderName:
             Fn::GetAtt: [ "CognitoUserPool", "ProviderName" ]
-        - ClientId:
-            Ref: CognitoUserPoolClient
-          ProviderName: !Ref UserPoolIdentityProviderFacebook
-          ServerSideTokenCheck: true
+      SupportedLoginProviders:
+        Facebook: ${self:custom.facebookClientId}
+
 
   # IAM roles
   CognitoIdentityPoolRoles:
