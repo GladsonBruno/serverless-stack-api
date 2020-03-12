@@ -1,5 +1,5 @@
 Resources:
-  UserPoolIdentityProviderFacebook:
+  UserPoolIdentityProvider:
     Type: AWS::Cognito::UserPoolIdentityProvider
     Properties:
       UserPoolId: 
@@ -16,4 +16,4 @@ Resources:
 Outputs:
   UserPoolId:
     Value:
-      Ref: UserPoolIdentityProviderFacebook
+      Ref: UserPoolIdentityProvider
