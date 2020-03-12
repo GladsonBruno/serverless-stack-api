@@ -4,7 +4,7 @@ Resources:
     Properties:
       UserPoolId: 
         Ref: CognitoUserPool
-      ProviderName: ${self:custom.stage}-Facebook
+      ProviderName: "Facebook"
       ProviderDetails:
         client_id: ${self:custom.facebookClientId}
         client_secret: ${self:custom.facebookClientSecret}
@@ -12,8 +12,3 @@ Resources:
       ProviderType: "Facebook"
       AttributeMapping:
         email: "email"
-
-Outputs:
-  UserPoolId:
-    Value:
-      Ref: UserPoolIdentityProvider
